@@ -2,6 +2,7 @@ module SimBack
   class SimProgress
     include Mongoid::Document
     include Mongoid::Timestamps
+    include Mongoid::Attributes::Dynamic
 
     def self.find_one_object(id)
       find(id)

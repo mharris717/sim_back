@@ -1,7 +1,7 @@
 module SimBack
   class Sim
     include FromHash
-    attr_accessor :sim_progress
+    attr_accessor :sim_progress, :sims
 
     def run!
       base = sim_progress.base_number

@@ -8,10 +8,11 @@ module SimBack
 
     def run!
       num_sims.times do
-        Sim.new(:sim_progress => sim_progress).run!
+        Sim.new(:sim_progress => sim_progress, :sims => self).run!
       end
 
-      sim_progress.inc(:sims_completed,num_sims)
+      sim_progress.inc(:sims_completed => num_sims)
+      #puts "Done Worker #{sim_progress.sims_completed}"
     end
   end
 end

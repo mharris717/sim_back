@@ -29,7 +29,7 @@ gem 'mharris_ext'
 gem 'andand'
 
 #gem 'activesupport','3.2.2'
-gem 'mongoid'
+gem 'mongoid', github: "mongoid/mongoid"
 gem 'bson_ext'
 #gem 'mongo'
 #gem 'mongo_persist'
@@ -40,3 +40,4 @@ gem 'bson_ext'
 gem 'sidekiq',"2.17.1"
 gem 'sinatra'
 gem 'slim'
+
