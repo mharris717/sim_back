@@ -20,12 +20,28 @@ Gem::Specification.new do |s|
     ".document",
     ".rspec",
     "Gemfile",
+    "Gemfile.lock",
     "LICENSE.txt",
     "README.rdoc",
     "Rakefile",
+    "VERSION",
+    "config.ru",
+    "config/development.yml",
     "lib/sim_back.rb",
+    "lib/sim_back/queue.rb",
+    "lib/sim_back/sim.rb",
+    "lib/sim_back/sim_progress.rb",
+    "lib/sim_back/sims.rb",
+    "lib/sim_back/summary_worker.rb",
+    "lib/sim_back/util.rb",
+    "lib/sim_back/worker.rb",
+    "sim_back.gemspec",
     "spec/sim_back_spec.rb",
-    "spec/spec_helper.rb"
+    "spec/spec_helper.rb",
+    "spec/support/sidekiq_setup.rb",
+    "spec/support_ext/setup_sidekiq.rb",
+    "spec/support_ext/summary_worker_reschedule.rb",
+    "tmp/.gitkeep"
   ]
   s.homepage = "http://github.com/mharris717/sim_back"
   s.licenses = ["MIT"]
