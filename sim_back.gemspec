@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mike Harris"]
-  s.date = "2014-02-26"
+  s.date = "2014-02-27"
   s.description = "sim_back"
   s.email = "mharris717@gmail.com"
   s.extra_rdoc_files = [
@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
     ".rspec",
     "Gemfile",
     "Gemfile.lock",
+    "Guardfile",
     "LICENSE.txt",
     "README.rdoc",
     "Rakefile",
@@ -34,11 +35,15 @@ Gem::Specification.new do |s|
     "lib/sim_back/sims.rb",
     "lib/sim_back/summary_worker.rb",
     "lib/sim_back/util.rb",
+    "lib/sim_back/web/views/index.haml",
+    "lib/sim_back/web/web.rb",
     "lib/sim_back/worker.rb",
     "sim_back.gemspec",
     "spec/sim_back_spec.rb",
     "spec/spec_helper.rb",
+    "spec/support/fake_runner.rb",
     "spec/support/sidekiq_setup.rb",
+    "spec/support_ext/basic_imp.rb",
     "spec/support_ext/setup_sidekiq.rb",
     "spec/support_ext/summary_worker_reschedule.rb",
     "tmp/.gitkeep"
@@ -60,6 +65,8 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<sidekiq>, ["= 2.17.1"])
       s.add_runtime_dependency(%q<sinatra>, [">= 0"])
       s.add_runtime_dependency(%q<slim>, [">= 0"])
+      s.add_runtime_dependency(%q<haml>, [">= 0"])
+      s.add_runtime_dependency(%q<tilt>, ["~> 1.4.1"])
       s.add_development_dependency(%q<rspec>, ["~> 2.8.0"])
       s.add_development_dependency(%q<rdoc>, ["~> 3.12"])
       s.add_development_dependency(%q<bundler>, [">= 1.0.0"])
@@ -78,6 +85,8 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<sidekiq>, ["= 2.17.1"])
       s.add_dependency(%q<sinatra>, [">= 0"])
       s.add_dependency(%q<slim>, [">= 0"])
+      s.add_dependency(%q<haml>, [">= 0"])
+      s.add_dependency(%q<tilt>, ["~> 1.4.1"])
       s.add_dependency(%q<rspec>, ["~> 2.8.0"])
       s.add_dependency(%q<rdoc>, ["~> 3.12"])
       s.add_dependency(%q<bundler>, [">= 1.0.0"])
@@ -97,6 +106,8 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<sidekiq>, ["= 2.17.1"])
     s.add_dependency(%q<sinatra>, [">= 0"])
     s.add_dependency(%q<slim>, [">= 0"])
+    s.add_dependency(%q<haml>, [">= 0"])
+    s.add_dependency(%q<tilt>, ["~> 1.4.1"])
     s.add_dependency(%q<rspec>, ["~> 2.8.0"])
     s.add_dependency(%q<rdoc>, ["~> 3.12"])
     s.add_dependency(%q<bundler>, [">= 1.0.0"])
