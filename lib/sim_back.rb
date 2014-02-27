@@ -3,6 +3,12 @@ require 'mharris_ext'
 require 'mongoid'
 require 'andand'
 
+class Object
+  def klass
+    self.class
+  end
+end
+
 module SimBack
   class << self
     def setup_mongoid!

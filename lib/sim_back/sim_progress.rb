@@ -4,6 +4,11 @@ module SimBack
     include Mongoid::Timestamps
     include Mongoid::Attributes::Dynamic
 
+    field :intermediate_summary_multiple, type: Integer
+    before_save do |prog|
+      prog.intermediate_summary_multiple ||= 1000
+    end
+
     def self.find_one_object(id)
       find(id)
     rescue => exp
@@ -22,7 +27,7 @@ module SimBack
       else
         :error
       end
-      #puts "Run State: #{res} num_sims: #{num_sims} completed: #{completed_sims} results: #{season_results.count}"
+      #puts "Run State: #{res} num_sims: #{num_sims} completed: #{completed_sims}"
       res
     end
   end

@@ -25,6 +25,7 @@ module SimBack
         end
 
         SummaryWorker.perform_async(progress.id.to_s)
+        IntermediateSummaryWorker.perform_async(progress.id.to_s,progress.intermediate_summary_multiple)
       end
     end
   end

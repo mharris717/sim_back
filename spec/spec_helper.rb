@@ -4,8 +4,8 @@ require 'mharris_ext'
 
 Spork.prefork do
   unless ENV['DRB']
-    require 'simplecov'
-    SimpleCov.start
+    #require 'simplecov'
+    #SimpleCov.start
   end
 
   #require 'rspec-prof'
@@ -25,8 +25,8 @@ end
 
 Spork.each_run do
   if ENV['DRB']
-    require 'simplecov'
-    SimpleCov.start
+    #require 'simplecov'
+    #SimpleCov.start
   end
   load File.dirname(__FILE__) + "/../lib/sim_back.rb"
   SimBack.setup_mongoid!

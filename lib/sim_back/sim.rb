@@ -4,8 +4,7 @@ module SimBack
     attr_accessor :sim_progress, :sims
 
     def run!
-      base = sim_progress.base_number
-      sim_progress.inc(:sum_number, base)
+      raise NotImplementedError
     end
   end
 end
