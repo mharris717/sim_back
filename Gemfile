@@ -40,4 +40,6 @@ gem 'bson_ext'
 gem 'sidekiq',"2.17.1"
 gem 'sinatra'
 gem 'slim'
+gem 'haml'
+gem 'tilt', '~> 1.4.1'
 

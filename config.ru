@@ -1,5 +1,5 @@
 load File.dirname(__FILE__) + "/lib/sim_back.rb"
 SimBack.setup!
+SimBack.setup_mongoid!
 
-require 'sidekiq/web'
-run Sidekiq::Web
+run SimBack::Web

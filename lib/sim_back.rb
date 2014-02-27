@@ -21,3 +21,7 @@ end
 %w(queue sim sim_progress sims summary_worker worker util).each do |f|
   load File.dirname(__FILE__) + "/sim_back/#{f}.rb"
 end
+
+%w(web).each do |f|
+  load File.dirname(__FILE__) + "/sim_back/web/#{f}.rb"
+end

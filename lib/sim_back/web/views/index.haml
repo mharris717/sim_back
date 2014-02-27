@@ -1,0 +1,6 @@
+%html
+  %body
+    %h2 Jobs
+    - SimBack::SimProgress.all.each do |prog|
+      = "#{prog.sims_completed} / #{prog.num_sims}"
+      %br

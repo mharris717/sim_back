@@ -63,6 +63,8 @@ GEM
       childprocess (>= 0.2.3)
       guard (>= 1.1)
       spork (>= 0.8.4)
+    haml (4.0.5)
+      tilt
     hashie (2.0.5)
     highline (1.6.20)
     i18n (0.6.9)
@@ -154,7 +156,7 @@ GEM
     thor (0.18.1)
     thread_safe (0.2.0)
       atomic (>= 1.1.7, < 2)
-    tilt (2.0.0)
+    tilt (1.4.1)
     timers (1.1.0)
     tzinfo (0.3.38)
     watchr (0.7)
@@ -169,6 +171,7 @@ DEPENDENCIES
   guard
   guard-rspec
   guard-spork
+  haml
   jeweler (~> 1.8.4)
   lre
   mharris_ext
@@ -181,3 +184,4 @@ DEPENDENCIES
   simplecov
   sinatra
   slim
+  tilt (~> 1.4.1)
