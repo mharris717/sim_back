@@ -13,6 +13,12 @@ describe "SimBack" do
     sum.should == (i*100.0 + 10.0).round(3)
   end
 
+  it 'consolidate', sidekiq: :fake do
+    progress = SimBack::Queue.queue(100, :base_number => 2)
+    runner.run!
+    SimBack::NumberObj.where(:sim_progress_id => progress.id.to_s).count.should == 4
+  end
+
   before do
     SimBack::IntermediateSummaryWorker.make_summary_args = []
   end

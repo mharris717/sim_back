@@ -14,5 +14,9 @@ module SimBack
         cls.jobs.clear if cls.respond_to?(:jobs)
       end
     end
+
+    def delete_jobs!
+      Sidekiq::Queue.all.each { |x| x.clear }
+    end
   end
 end

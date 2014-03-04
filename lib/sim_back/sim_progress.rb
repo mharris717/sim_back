@@ -3,6 +3,7 @@ module SimBack
     include Mongoid::Document
     include Mongoid::Timestamps
     include Mongoid::Attributes::Dynamic
+    store_in session: :sim_back
 
     field :intermediate_summary_multiple, type: Integer
     before_save do |prog|

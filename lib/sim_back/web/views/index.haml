@@ -2,5 +2,6 @@
   %body
     %h2 Jobs
     - SimBack::SimProgress.all.each do |prog|
-      = "#{prog.sims_completed} / #{prog.num_sims}"
+      = "#{prog.sims_completed} / #{prog.num_sims} / "
+      = SimBack::GameStats.where(:sim_progress_id => prog.id.to_s).count
       %br

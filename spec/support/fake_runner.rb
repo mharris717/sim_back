@@ -28,6 +28,6 @@ end
 
 shared_context "runner" do
   let(:runner) do
-    FakeRunner.new(:worker_classes => [SimBack::Worker,SimBack::SummaryWorker,SimBack::IntermediateSummaryWorker])
+    FakeRunner.new(:worker_classes => [SimBack::Worker,SimBack::SummaryWorker,SimBack::IntermediateSummaryWorker,SimBack::ConsolidateWorker])
   end
 end
