@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/mharris717/mongoid_gem_config.git
+  revision: 83fb4ad8c3e7fe0a42681f79b81e7763b4f2c270
+  branch: master
+  specs:
+    mongoid_gem_config (0.0.1)
+      mharris_ext
+
+GIT
   remote: git://github.com/mongoid/mongoid.git
   revision: c8af8d0836b086cebc4a609037a97747e9f3359b
   specs:
@@ -176,6 +184,7 @@ DEPENDENCIES
   lre
   mharris_ext
   mongoid!
+  mongoid_gem_config!
   rake
   rb-fsevent (~> 0.9)
   rdoc (~> 3.12)

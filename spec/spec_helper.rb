@@ -13,6 +13,7 @@ Spork.prefork do
   $LOAD_PATH.unshift(File.dirname(__FILE__))
 
   require 'rspec'
+  load File.dirname(__FILE__) + "/../lib/sim_back.rb"
 
   # Requires supporting files with custom matchers and macros, etc,
   # in ./support/ and its subdirectories.
@@ -28,7 +29,8 @@ Spork.each_run do
     #require 'simplecov'
     #SimpleCov.start
   end
-  load File.dirname(__FILE__) + "/../lib/sim_back.rb"
-  SimBack.setup_mongoid!
+
+  SimBack.load!
+  
   Dir["#{File.dirname(__FILE__)}/support_ext/**/*.rb"].each { |f| load f }
 end

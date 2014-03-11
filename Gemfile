@@ -43,3 +43,5 @@ gem 'slim'
 gem 'haml'
 gem 'tilt', '~> 1.4.1'
 
+gem 'mongoid_gem_config', :github => 'mharris717/mongoid_gem_config', :branch => 'master'
+
