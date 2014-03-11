@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/mharris717/mongoid_gem_config.git
-  revision: 39a0f09f675e6ac81a110c1052a02e55e0562d5d
+  revision: a66258808064caf5e164ac11575bdd55a88a751d
   branch: master
   specs:
     mongoid_gem_config (0.0.1)
