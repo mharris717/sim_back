@@ -5,6 +5,13 @@ source "http://rubygems.org"
 
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
+
+#### SPECIAL GEMFILE BLOCK START
+def private_gem(name)
+  gem name, '0.3.0', git: "https://#{ENV['GITHUB_TOKEN']}:x-oauth-basic@github.com/mharris717/#{name}.git", branch: :master
+end
+#### SPECIAL GEMFILE BLOCK END
+
 group :development do
   gem "rspec", "~> 2.8.0"
   gem "rdoc", "~> 3.12"
@@ -43,5 +50,5 @@ gem 'slim'
 gem 'haml'
 gem 'tilt', '~> 1.4.1'
 
-gem 'mongoid_gem_config', :github => 'mharris717/mongoid_gem_config', :branch => 'master'
+private_gem 'mongoid_gem_config'
 

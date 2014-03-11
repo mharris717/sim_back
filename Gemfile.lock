@@ -1,12 +1,4 @@
 GIT
-  remote: git://github.com/mharris717/mongoid_gem_config.git
-  revision: 28eb94e024bd07d33d648ab19d5fc0b160c91717
-  branch: master
-  specs:
-    mongoid_gem_config (0.0.1)
-      mharris_ext
-
-GIT
   remote: git://github.com/mongoid/mongoid.git
   revision: c8af8d0836b086cebc4a609037a97747e9f3359b
   specs:
@@ -15,6 +7,15 @@ GIT
       moped (~> 2.0.beta6)
       origin (~> 2.1)
       tzinfo (>= 0.3.37)
+
+GIT
+  remote: https://0bb047fe3ee12dd67af1fc2d6616d73c191912cd:x-oauth-basic@github.com/mharris717/mongoid_gem_config.git
+  revision: 6a5dd87a9fa7045acfa8b16ca08415a212f0ac7a
+  branch: master
+  specs:
+    mongoid_gem_config (0.3.0)
+      mharris_ext
+      mongoid
 
 GEM
   remote: http://rubygems.org/
@@ -184,7 +185,7 @@ DEPENDENCIES
   lre
   mharris_ext
   mongoid!
-  mongoid_gem_config!
+  mongoid_gem_config (= 0.3.0)!
   rake
   rb-fsevent (~> 0.9)
   rdoc (~> 3.12)
