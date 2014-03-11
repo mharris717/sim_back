@@ -48,7 +48,8 @@ Gem::Specification.new do |s|
     "spec/support_ext/basic_imp.rb",
     "spec/support_ext/setup_sidekiq.rb",
     "spec/support_ext/summary_worker_reschedule.rb",
-    "tmp/.gitkeep"
+    "tmp/.gitkeep",
+    "vol/fork_test.rb"
   ]
   s.homepage = "http://github.com/mharris717/sim_back"
   s.licenses = ["MIT"]
