@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mike Harris"]
-  s.date = "2014-02-27"
+  s.date = "2014-03-11"
   s.description = "sim_back"
   s.email = "mharris717@gmail.com"
   s.extra_rdoc_files = [
@@ -27,8 +27,9 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "config.ru",
-    "config/development.yml",
+    "config/mongoid.yml",
     "lib/sim_back.rb",
+    "lib/sim_back/consolidate_worker.rb",
     "lib/sim_back/queue.rb",
     "lib/sim_back/sim.rb",
     "lib/sim_back/sim_progress.rb",
@@ -42,6 +43,7 @@ Gem::Specification.new do |s|
     "spec/sim_back_spec.rb",
     "spec/spec_helper.rb",
     "spec/support/fake_runner.rb",
+    "spec/support/mongo_connect.rb",
     "spec/support/sidekiq_setup.rb",
     "spec/support_ext/basic_imp.rb",
     "spec/support_ext/setup_sidekiq.rb",
@@ -67,6 +69,7 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<slim>, [">= 0"])
       s.add_runtime_dependency(%q<haml>, [">= 0"])
       s.add_runtime_dependency(%q<tilt>, ["~> 1.4.1"])
+      s.add_runtime_dependency(%q<mongoid_gem_config>, [">= 0"])
       s.add_development_dependency(%q<rspec>, ["~> 2.8.0"])
       s.add_development_dependency(%q<rdoc>, ["~> 3.12"])
       s.add_development_dependency(%q<bundler>, [">= 1.0.0"])
@@ -87,6 +90,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<slim>, [">= 0"])
       s.add_dependency(%q<haml>, [">= 0"])
       s.add_dependency(%q<tilt>, ["~> 1.4.1"])
+      s.add_dependency(%q<mongoid_gem_config>, [">= 0"])
       s.add_dependency(%q<rspec>, ["~> 2.8.0"])
       s.add_dependency(%q<rdoc>, ["~> 3.12"])
       s.add_dependency(%q<bundler>, [">= 1.0.0"])
@@ -108,6 +112,7 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<slim>, [">= 0"])
     s.add_dependency(%q<haml>, [">= 0"])
     s.add_dependency(%q<tilt>, ["~> 1.4.1"])
+    s.add_dependency(%q<mongoid_gem_config>, [">= 0"])
     s.add_dependency(%q<rspec>, ["~> 2.8.0"])
     s.add_dependency(%q<rdoc>, ["~> 3.12"])
     s.add_dependency(%q<bundler>, [">= 1.0.0"])
