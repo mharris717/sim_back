@@ -10,8 +10,8 @@ source "http://rubygems.org"
 if FileTest.exist?("/code/orig/private_gem/private_gem.rb")
   load "/code/orig/private_gem/private_gem.rb"
 else
-  def private_gem(*args)
-    gem *args
+  def private_gem(name)
+    gem name, git: "https://#{ENV['GITHUB_TOKEN']}:x-oauth-basic@github.com/mharris717/#{name}.git", branch: :master
   end
 end
 #### SPECIAL GEMFILE BLOCK END
