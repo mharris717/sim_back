@@ -7,7 +7,13 @@ source "http://rubygems.org"
 # Include everything needed to run rake, tests, features, etc.
 
 #### SPECIAL GEMFILE BLOCK START
-load "/code/orig/private_gem/private_gem.rb"
+if FileTest.exist?("/code/orig/private_gem/private_gem.rb")
+  load "/code/orig/private_gem/private_gem.rb"
+else
+  def private_gem(*args)
+    gem *args
+  end
+end
 #### SPECIAL GEMFILE BLOCK END
 
 group :development do
