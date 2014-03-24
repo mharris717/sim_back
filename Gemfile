@@ -7,9 +7,7 @@ source "http://rubygems.org"
 # Include everything needed to run rake, tests, features, etc.
 
 #### SPECIAL GEMFILE BLOCK START
-def private_gem(name)
-  gem name, '0.3.0', git: "https://#{ENV['GITHUB_TOKEN']}:x-oauth-basic@github.com/mharris717/#{name}.git", branch: :master
-end
+load "/code/orig/private_gem/private_gem.rb"
 #### SPECIAL GEMFILE BLOCK END
 
 group :development do
