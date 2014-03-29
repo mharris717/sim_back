@@ -8,15 +8,6 @@ GIT
       origin (~> 2.1)
       tzinfo (>= 0.3.37)
 
-GIT
-  remote: https://0bb047fe3ee12dd67af1fc2d6616d73c191912cd:x-oauth-basic@github.com/mharris717/mongoid_gem_config.git
-  revision: b6d913693a134196858bc583897118c392a23672
-  branch: master
-  specs:
-    mongoid_gem_config (0.3.0)
-      mharris_ext
-      mongoid
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -104,6 +95,9 @@ GEM
       facets
       fattr
     minitest (4.7.5)
+    mongoid_gem_config (0.3.0)
+      mharris_ext
+      mongoid (= 4.0.0.beta1)
     moped (2.0.0.beta6)
       bson (~> 2.2)
       connection_pool (~> 1.2)
@@ -185,7 +179,7 @@ DEPENDENCIES
   lre
   mharris_ext
   mongoid!
-  mongoid_gem_config!
+  mongoid_gem_config
   rake
   rb-fsevent (~> 0.9)
   rdoc (~> 3.12)
