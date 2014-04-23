@@ -1,6 +1,6 @@
 GIT
   remote: https://0bb047fe3ee12dd67af1fc2d6616d73c191912cd:x-oauth-basic@github.com/mharris717/mongoid_gem_config.git
-  revision: b248104cf2fa43dd35162b8a8f6cc624f7a9dfdc
+  revision: 66c7aaf43be012fac35390071d530bdef5bcddb7
   branch: master
   specs:
     mongoid_gem_config (0.3.0)
